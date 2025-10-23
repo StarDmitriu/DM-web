@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="media.css">
+  <link rel="preload" href="https://unpkg.com/aos@2.3.1/dist/aos.css" as="style">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" as="style">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <title>Web Development</title>
+</head>
+<body>
+  <section class="navbar_section">
+    <a href="index.html" class="navbar_title">DM</a>
+    
+    <!-- Бургер-иконка -->
+    <div class="burger-menu" id="burgerMenu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    
+    <!-- Основное меню -->
+    <div class="nav-menu" id="navMenu">
+        <a href="#hero" class="menu-link">Главная</a>
+        <a href="#about" class="menu-link">Обо мне</a>
+        <a href="#item" class="menu-link">Кейсы</a>
+        <a href="#services" class="menu-link">Услуги</a>
+        <a href="#footer" class="menu-link">Контакты</a>
+    </div>
+    
+    <button class="navbar-menu" onclick="openModal()">Оставить заявку</button>
+</section>
+
+<!-- Мобильное меню (оверлей) -->
+<div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
+
+  <div class="quiz-modal">
+    <div class="quiz-overlay" onclick="closeModal()"></div>
+    <div class="quiz-container">
+      <button class="quiz-close" onclick="closeModal()">
+        <svg width="28" height="28" viewBox="0 0 20 20" fill="currentColor">
+          <path d="M15.5 4.5l-11 11m0-11l11 11" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </button>
+      <h1 class="quiz-title">Оставьте заявку и я свяжусь с вами</h1>
+      <form id="form">
+        <input type="text" id="name" placeholder="Ваше имя" required>
+        <input type="text" id="telegram" placeholder="@ваш Telegram" required>
+        <textarea id="comment" placeholder="Пожелания" required></textarea>
+        <button id="submit-btn">Отправить</button>
+      </form>
+    </div>
+  </div>
+
+  <div id="hero">
+    <p class="invise">.</p>
+  </div>
+  <section class="hero">
+    <div class="blur-circle circle-1"></div>
+    <div class="blur-circle circle-2"></div>
+    <div class="blur-circle circle-3"></div>
+    <div class="hero-content">
+      <h1 class="hero-title">сайты которые увеличат <span>прибыль</span></h1>
+      <p class="hero-text">Каждый сайт, который я создаю — это не просто страница в интернете, а продуманный инструмент для привлечения клиентов и роста бизнеса. Я фокусируюсь на практичных решениях: быстрая загрузка, адаптивная верстка, понятная структура и формы, которые действительно работают.</p>
+      <button class="hero-button" onclick="openModal()">Обсудить проект</button>
+    </div>
+  </section>
+
+  <section class="about-section" id="about">
+    <div class="container">
+      <div class="about-container">
+        <div class="about-content">
+          <h2 class="about-title" data-aos="fade-up" data-aos-duration="800" data-aos-easing="ease-out-cubic">Профессиональный <span>web-<br>разработчик</span> для вас</h2>
+          <p class="about-text" data-aos="fade-up" data-aos-duration="800" data-aos-easing="ease-out-cubic" data-aos-delay="200">Приветствую, меня зовут Дмитрий. Без лишнего пафоса — просто чистая верстка, современный дизайн и внимание к деталям. Я верю, что сайт должен быть не просто красивым, а понятным, быстрым и полезным. Работаю сам, отвечаю за результат лично. Если вам нужен сайт, который будет приносить пользу — давайте обсудим.</p>
+          <button class="about-button" onclick="openModal()" data-aos="fade-up" data-aos-duration="800" data-aos-easing="ease-out-cubic" data-aos-delay="100" data-aos-offset="50">Оставить заявку</button>
+        </div>
+        <div class="about-features">
+          <div class="feature-item" data-aos="fade-up" data-aos-duration="800" data-aos-easing="ease-out-cubic">
+            <h1 class="feature-number">50%</h1>
+            <h2 class="feature-title">Предоплата</h2>
+            <p class="feature-text">Работа начинается после оплаты 50% от всей суммы</p>
+          </div>
+          <div class="feature-item" data-aos="fade-up" data-aos-duration="800" data-aos-easing="ease-out-cubic" data-aos-delay="100">
+            <h1 class="feature-number">21</h1>
+            <h2 class="feature-title">день</h2>
+            <p class="feature-text">Среднее время через которое ваш сайт полностью готов</p>
+          </div>
+          <div class="feature-item" data-aos="fade-up" data-aos-duration="800" data-aos-easing="ease-out-cubic" data-aos-delay="300">
+            <h1 class="feature-number">24/7</h1>
+            <h2 class="feature-title">Поддержка</h2>
+            <p class="feature-text">Вы всегда получите ответы на ваши вопросы</p>
+          </div>
+          <div class="feature-item" data-aos="fade-up" data-aos-duration="800" data-aos-easing="ease-out-cubic" data-aos-delay="400">
+            <h1 class="feature-number">100%</h1>
+            <h2 class="feature-title">Беру на себя</h2>
+            <p class="feature-text">Всё, от дизайна, до хостинга делаю я, вам нечего не нужно делать</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="item" id="item">
+    <div class="blur-circle circle-4"></div>
+    <div class="blur-circle circle-5"></div>
+    <div class="blur-circle circle-6"></div>
+    <h1 class="item-title" data-aos="fade-up"  data-aos-duration="800" data-aos-easing="ease-out-cubic">Кейсы</h1>
+    <div class="cases">
+      <div class="container">
+        <div class="case" data-aos="fade-up" data-aos-duration="800" data-aos-easing="ease-out-cubic" data-aos-delay="100">
+          <img src="img/case1.png" alt="Дизель генераторы" class="case-img">
+          <h2 class="case-title">Дизель генераторы</h2>
+          <p class="case-text">Сдержанный дизайн подчеркивает надежность оборудования, а структура страницы помогает быстро оценить преимущества и технические характеристики генераторов.</p>
+        </div>
+        <div class="case" data-aos="fade-up" data-aos-duration="800" data-aos-easing="ease-out-cubic" data-aos-delay="300">
+          <img src="img/case2.png" alt="Вещи из бумаги" class="case-img">
+          <h2 class="case-title">Вещи из бумаги</h2>
+          <p class="case-text">Минималистичный сайт с акцентом на экологичность. Чистый визуал и мягкие текстуры создают доверие к продукту. Удобная навигация раскрывает ассортимент и демонстрирует качество изделий.</p>
+        </div>
+        <div class="case" data-aos="fade-up" data-aos-duration="800" data-aos-easing="ease-out-cubic" data-aos-delay="400">
+          <img src="img/case3.png" alt="Ремонт недвижимости" class="case-img">
+          <h2 class="case-title">Ремонт недвижимости</h2>
+          <p class="case-text">Современный сайт с интерьерной эстетикой. Дизайн отражает стиль и комфорт, а структура кейса помогает клиенту понять этапы ремонта и увидеть реальные примеры работ.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="services-section" id="services">
+    <h1 class="services-title" data-aos="fade-up" data-aos-duration="800" data-aos-easing="ease-out-cubic" >Наши <span>услуги</span></h1>
+      <div class="container">
+      <div class="services-cases">
+        <div class="services-case" data-aos="fade-up" data-aos-duration="800" data-aos-easing="ease-out-cubic" data-aos-delay="100">
+          <div class="service-badge"><p>★ Хит продаж</p></div>
+          <h2 class="service-title">Привлекающие лендинг</h2>
+          <p class="service-text">Одностраничный сайт с быстрым запускам и акцентом на конверсию.</p>
+          <div class="service-pricing">
+            <span class="old-price">25 000 ₽</span>
+            <span class="current-price">От 20 000 ₽</span>
+          </div>
+          <a href="https://t.me/SDima_web" target="_blank" class="service-more">Подробнее</a>
+        </div>
+        <div class="services-case" data-aos="fade-up" data-aos-duration="800" data-aos-easing="ease-out-cubic" data-aos-delay="300">
+          <div class="service-badge"><p>% Выгодно</p></div>
+          <h2 class="service-title">Многостраничный сайт</h2>
+          <p class="service-text">Подходит для компаний, которым важно раскрыть себя и выстроить доверие.</p>
+          <div class="service-pricing">
+            <span class="old-price">45 000 ₽</span>
+            <span class="current-price">От 40 000 ₽ </span>
+          </div>
+          <a href="https://t.me/SDima_web" target="_blank" class="service-more">Подробнее</a>
+        </div>
+        <div class="services-case" data-aos="fade-up" data-aos-duration="800" data-aos-easing="ease-out-cubic" data-aos-delay="400">
+          <h2 class="service-title">Улучшение вашего сайта</h2>
+          <p class="service-text">Дизайн вашего сайта станет более современным, а код чище.</p>
+          <div class="service-pricing">
+            <span class="old-price">20 000 ₽</span>
+            <span class="current-price">15 000 ₽</span>
+          </div>
+          <a href="https://t.me/SDima_web" target="_blank" class="service-more">Подробнее</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer class="footer" id="footer">
+    <div class="container">
+      <div class="footer-items">
+        <div class="footer-item1">
+          <h1 class="footer-title">DM</h1>
+          <p class="footer-text">Готовы создать сайт для себя или вашего бизнеса и повысить доверие клиентов? Оставьте заявку!</p>
+          <button class="footer-button" onclick="openModal()">Отсавить заявку</button>
+        </div>
+        <div class="footer-item2">
+          <h2 class="footer-nav__title">Навигация</h2>
+          <div class="footer-links">
+            <a href="#hero" class="footer-link">Главная</a>
+            <a href="#about" class="footer-link">Обо мне</a>
+            <a href="#item" class="footer-link">Кейсы</a>
+            <a href="#services" class="footer-link">Услуги</a>
+            <a href="#footer" class="footer-link">Контакты</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    // Инициализация AOS после загрузки DOM
+    document.addEventListener('DOMContentLoaded', function() {
+      AOS.init();
+    });
+  </script>
+  <script src="js/main.js"></script>
+</body>
+</html>
