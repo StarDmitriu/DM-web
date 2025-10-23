@@ -145,14 +145,14 @@ document.getElementById('form').addEventListener('submit', async function (e) {
 			// Закрываем модальное окно
 			setTimeout(() => {
 				closeModal()
-			}, 1500)
+			}, 500)
 		} else {
 			alert(
-				'Не удалось отправить заявку. Напишите мне напрямую в Telegram: @SDima_web'
+				'Не удалось отправить заявку. Напишите мне напрямую в Telegram: @Dmitriu_web'
 			)
 		}
 	} catch (error) {
-		alert('Произошла ошибка. Напишите мне напрямую в Telegram: @SDima_web')
+		alert('Произошла ошибка. Напишите мне напрямую в Telegram: @Dmitriu_web')
 	} finally {
 		// Всегда восстанавливаем кнопку
 		submitBtn.textContent = originalText
@@ -170,4 +170,5 @@ document.addEventListener('keydown', function (e) {
 		closeModal()
 	}
 })
+
 
